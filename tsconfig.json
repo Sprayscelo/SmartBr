@@ -5,12 +5,13 @@
     "outDir": "dist",
     "rootDir": ".",
     "paths": {
+      "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
       "@redux/*": ["./src/redux/*"],
-      "@routes/*": ["./src/theme/*"],
+      "@routes/*": ["./src/routes/*"],
       "@screens/*": ["./src/screens/*"],
       "@services/*": ["./src/services/*"],
       "@theme/*": ["./src/theme/*"],
-    }
+    },
   },
 }
