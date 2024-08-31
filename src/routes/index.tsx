@@ -1,84 +1,30 @@
-import { Text } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Octicons from 'react-native-vector-icons/Octicons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { Favorites } from '@screens/Favorites';
-import { News } from '@screens/News';
+import {
+  createNativeStackNavigator,
+  NativeStackNavigationProp
+} from '@react-navigation/native-stack';
+import { BottomTabRoutes } from './tabRoutes';
+import { WebViewScreen } from '@screens/Webview';
 
-import { theme } from '@theme/index';
-
-export type RoutesProps = {
-  News: undefined;
-  Favorites: undefined;
+export type StackRoutes = {
+  bottomTabRoutes: undefined;
+  webview: {
+    link: string;
+  };
 };
 
-const { Navigator, Screen } = createBottomTabNavigator<RoutesProps>();
+export type NativeStackNavigationProps = NativeStackNavigationProp<StackRoutes>;
+
+const { Navigator, Screen } = createNativeStackNavigator<StackRoutes>();
 
 export function Routes() {
   return (
     <Navigator
-      initialRouteName="News"
+      initialRouteName="bottomTabRoutes"
       screenOptions={{
-        headerShown: false,
-        tabBarStyle: {
-          backgroundColor: theme.colors.tabBarBackgroud,
-          height: 68
-        }
+        headerShown: false
       }}>
-      <Screen
-        name="News"
-        component={News}
-        options={{
-          title: 'Início',
-          tabBarIcon: ({ focused }) => (
-            <Octicons
-              name="home"
-              size={22}
-              color={focused ? theme.colors.blue : theme.colors.icon}
-            />
-          ),
-          tabBarItemStyle: {
-            paddingVertical: 10
-          },
-          tabBarLabel: ({ focused }) => (
-            <Text
-              style={{
-                fontSize: 10,
-                color: theme.colors.tabBarLetter,
-                fontFamily: focused ? 'Inter_Bold' : 'Inter_Light'
-              }}>
-              Início
-            </Text>
-          )
-        }}
-      />
-      <Screen
-        name="Favorites"
-        component={Favorites}
-        options={{
-          title: 'Favoritos',
-          tabBarIcon: ({ focused }) => (
-            <FontAwesome
-              name="heart-o"
-              size={22}
-              color={focused ? theme.colors.blue : theme.colors.icon}
-            />
-          ),
-          tabBarItemStyle: {
-            paddingVertical: 10
-          },
-          tabBarLabel: ({ focused }) => (
-            <Text
-              style={{
-                fontSize: 10,
-                color: theme.colors.tabBarLetter,
-                fontFamily: focused ? 'Inter_Bold' : 'Inter_Light'
-              }}>
-              Favorito
-            </Text>
-          )
-        }}
-      />
+      <Screen name="bottomTabRoutes" component={BottomTabRoutes} />
+      <Screen name="webview" component={WebViewScreen} />
     </Navigator>
   );
 }

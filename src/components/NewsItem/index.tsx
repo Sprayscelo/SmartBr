@@ -1,4 +1,6 @@
 import { Button } from '@components/Button';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProps } from '@routes/index';
 import { theme } from '@theme/index';
 import { Box, View, Text, Image } from 'native-base';
 
@@ -31,6 +33,8 @@ export function NewsItem({
   tipo,
   titulo
 }: News) {
+  const { navigate } = useNavigation<NativeStackNavigationProps>();
+  const baseImageUrl = 'https://agenciadenoticias.ibge.gov.br/';
   return (
     <Box>
       <Text
@@ -49,14 +53,10 @@ export function NewsItem({
       <Image
         borderRadius={16}
         source={{
-          uri: `https://agenciadenoticias.ibge.gov.br/${
-            JSON.parse(imagens).image_intro
-          }`
+          uri: `${baseImageUrl}${JSON.parse(imagens).image_intro}`
         }}
         height={200}
-        alt={`https://agenciadenoticias.ibge.gov.br/${
-          JSON.parse(imagens).image_intro_alt
-        }`}
+        alt={`${baseImageUrl}${JSON.parse(imagens).image_intro_alt}`}
       />
       <Text
         fontFamily={theme.fonts.regular}
@@ -67,7 +67,15 @@ export function NewsItem({
       </Text>
       <View flexDirection={'row'} justifyContent={'center'} style={{ gap: 15 }}>
         <Button text="Favoritar" type="Favorite" />
-        <Button text="Ver tudo" type="ViewAll" />
+        <Button
+          text="Ver tudo"
+          type="ViewAll"
+          onPress={() =>
+            navigate('webview', {
+              link
+            })
+          }
+        />
       </View>
     </Box>
   );

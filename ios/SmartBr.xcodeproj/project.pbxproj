@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* SmartBrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SmartBrTests.m */; };
+		095131C1B2064D428CFF520A /* Inter_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F83CD07A9BF4F09806DA807 /* Inter_Light.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-SmartBr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-SmartBr.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		67BFA13B4E024329861BE1E9 /* Inter_SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6734A467685A418297FDCC55 /* Inter_SemiBold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-SmartBr-SmartBrTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SmartBr-SmartBrTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		969737550F9AFBC8CA089759 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 81FA7331EDDAA60274BF8797 /* PrivacyInfo.xcprivacy */; };
-		EE003C7C0DD14EFCA5A2C0AF /* Inter_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E042BACC3FE64705A107DCC8 /* Inter_Bold.ttf */; };
-		095131C1B2064D428CFF520A /* Inter_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F83CD07A9BF4F09806DA807 /* Inter_Light.ttf */; };
-		B3EE522D0EAF4702B4E129DF /* Inter_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEFBFE62634E4C61B5DB21DC /* Inter_Medium.ttf */; };
 		83BB45E8B2D24FA78F5F8D4E /* Inter_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0644CFED690E40B1A92F37F1 /* Inter_Regular.ttf */; };
-		67BFA13B4E024329861BE1E9 /* Inter_SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6734A467685A418297FDCC55 /* Inter_SemiBold.ttf */; };
+		969737550F9AFBC8CA089759 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 81FA7331EDDAA60274BF8797 /* PrivacyInfo.xcprivacy */; };
+		B3EE522D0EAF4702B4E129DF /* Inter_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEFBFE62634E4C61B5DB21DC /* Inter_Medium.ttf */; };
+		EE003C7C0DD14EFCA5A2C0AF /* Inter_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E042BACC3FE64705A107DCC8 /* Inter_Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,7 @@
 		00E356EE1AD99517003FC87E /* SmartBrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartBrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SmartBrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartBrTests.m; sourceTree = "<group>"; };
+		0644CFED690E40B1A92F37F1 /* Inter_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter_Regular.ttf; path = ../assets/fonts/Inter_Regular.ttf; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SmartBr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SmartBr/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = SmartBr/AppDelegate.mm; sourceTree = "<group>"; };
@@ -44,19 +45,18 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SmartBr/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = SmartBr/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-SmartBr-SmartBrTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartBr-SmartBrTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F83CD07A9BF4F09806DA807 /* Inter_Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter_Light.ttf; path = ../assets/fonts/Inter_Light.ttf; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-SmartBr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBr.debug.xcconfig"; path = "Target Support Files/Pods-SmartBr/Pods-SmartBr.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-SmartBr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBr.release.xcconfig"; path = "Target Support Files/Pods-SmartBr/Pods-SmartBr.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-SmartBr-SmartBrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBr-SmartBrTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartBr-SmartBrTests/Pods-SmartBr-SmartBrTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-SmartBr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartBr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6734A467685A418297FDCC55 /* Inter_SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter_SemiBold.ttf; path = ../assets/fonts/Inter_SemiBold.ttf; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SmartBr/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81FA7331EDDAA60274BF8797 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = SmartBr/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-SmartBr-SmartBrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBr-SmartBrTests.release.xcconfig"; path = "Target Support Files/Pods-SmartBr-SmartBrTests/Pods-SmartBr-SmartBrTests.release.xcconfig"; sourceTree = "<group>"; };
+		BEFBFE62634E4C61B5DB21DC /* Inter_Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter_Medium.ttf; path = ../assets/fonts/Inter_Medium.ttf; sourceTree = "<group>"; };
+		E042BACC3FE64705A107DCC8 /* Inter_Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter_Bold.ttf; path = ../assets/fonts/Inter_Bold.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		E042BACC3FE64705A107DCC8 /* Inter_Bold.ttf */ = {isa = PBXFileReference; name = "Inter_Bold.ttf"; path = "../assets/fonts/Inter_Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1F83CD07A9BF4F09806DA807 /* Inter_Light.ttf */ = {isa = PBXFileReference; name = "Inter_Light.ttf"; path = "../assets/fonts/Inter_Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		BEFBFE62634E4C61B5DB21DC /* Inter_Medium.ttf */ = {isa = PBXFileReference; name = "Inter_Medium.ttf"; path = "../assets/fonts/Inter_Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0644CFED690E40B1A92F37F1 /* Inter_Regular.ttf */ = {isa = PBXFileReference; name = "Inter_Regular.ttf"; path = "../assets/fonts/Inter_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6734A467685A418297FDCC55 /* Inter_SemiBold.ttf */ = {isa = PBXFileReference; name = "Inter_SemiBold.ttf"; path = "../assets/fonts/Inter_SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +165,7 @@
 			sourceTree = "<group>";
 		};
 		DA410F7EF20B49E291FF71F3 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				E042BACC3FE64705A107DCC8 /* Inter_Bold.ttf */,
 				1F83CD07A9BF4F09806DA807 /* Inter_Light.ttf */,
@@ -174,8 +174,8 @@
 				6734A467685A418297FDCC55 /* Inter_SemiBold.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
