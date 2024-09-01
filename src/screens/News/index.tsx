@@ -13,6 +13,7 @@ export function News() {
 
   const dispatch = useDispatch();
   const news = useSelector((state: RootState) => state.news);
+  const favorites = useSelector((state: RootState) => state.favorites);
 
   const handleGetNews = async (pageNumber?: number) => {
     try {
@@ -39,8 +40,11 @@ export function News() {
       <Header text="Smart Br" />
       <FlatList
         data={news.items}
-        renderItem={({ item }) => <NewsItem key={item.id} {...item} />}
-        ItemSeparatorComponent={({}) => <Divider marginY={3} />}
+        renderItem={({ item }) => {
+          const isFavorite = favorites.some(fav => fav.id === item.id);
+          return <NewsItem key={item.id} {...item} isFavorited={isFavorite} />;
+        }}
+        ItemSeparatorComponent={() => <Divider marginY={3} />}
         marginTop={3}
         onEndReached={async () => {
           if (news.totalPages > news.page) {

@@ -7,11 +7,11 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 interface HeaderProps {
   text: string;
-  Icon?: ElementType | ReactNode;
+  showBackButton?: boolean;
 }
 
-export function Header({ text, Icon }: HeaderProps) {
-  const { canGoBack, goBack } = useNavigation();
+export function Header({ text, showBackButton = false }: HeaderProps) {
+  const { goBack } = useNavigation();
 
   return (
     <View
@@ -21,12 +21,12 @@ export function Header({ text, Icon }: HeaderProps) {
       borderBottomColor={theme.colors.border}
       paddingBottom={3}
       style={{ gap: 12 }}>
-      {canGoBack() ? (
+      {showBackButton ? (
         <MaterialIcons
           onPress={goBack}
           name="keyboard-arrow-left"
           size={22}
-          color={'black'}
+          color={theme.colors.icon}
         />
       ) : (
         <Image

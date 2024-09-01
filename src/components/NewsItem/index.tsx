@@ -1,8 +1,10 @@
 import { Button } from '@components/Button';
 import { useNavigation } from '@react-navigation/native';
+import { addFavoriteNews, removeFavoriteNews } from '@redux/favoriteSlice';
 import { NativeStackNavigationProps } from '@routes/index';
 import { theme } from '@theme/index';
-import { Box, View, Text, Image } from 'native-base';
+import { Box, Image, Text, View } from 'native-base';
+import { useDispatch } from 'react-redux';
 
 export interface News {
   id: number;
@@ -19,6 +21,10 @@ export interface News {
   link: string;
 }
 
+interface NewsItemProps extends News {
+  isFavorited?: boolean;
+}
+
 export function NewsItem({
   id,
   data_publicacao,
@@ -31,10 +37,36 @@ export function NewsItem({
   produtos,
   produtos_relacionados,
   tipo,
-  titulo
-}: News) {
+  titulo,
+  isFavorited = false
+}: NewsItemProps) {
+  const dispatch = useDispatch();
   const { navigate } = useNavigation<NativeStackNavigationProps>();
   const baseImageUrl = 'https://agenciadenoticias.ibge.gov.br/';
+
+  const handleFavoriteButton = async () => {
+    if (isFavorited) {
+      dispatch(removeFavoriteNews(id));
+    } else {
+      dispatch(
+        addFavoriteNews({
+          id,
+          data_publicacao,
+          destaque,
+          editorias,
+          imagens,
+          introducao,
+          link,
+          produto_id,
+          produtos,
+          produtos_relacionados,
+          tipo,
+          titulo
+        })
+      );
+    }
+  };
+
   return (
     <Box>
       <Text
@@ -66,7 +98,11 @@ export function NewsItem({
         {data_publicacao.split(' ')[0]}
       </Text>
       <View flexDirection={'row'} justifyContent={'center'} style={{ gap: 15 }}>
-        <Button text="Favoritar" type="Favorite" />
+        <Button
+          onPress={handleFavoriteButton}
+          text={isFavorited ? 'Remover' : 'Favoritar'}
+          type="Favorite"
+        />
         <Button
           text="Ver tudo"
           type="ViewAll"
