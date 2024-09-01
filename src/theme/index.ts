@@ -11,10 +11,10 @@ export const theme = {
     blue: '#3995C7'
   },
   fonts: {
-    light: 'Inter_Light',
-    bold: 'Inter_Bold',
-    regular: 'Inter_Regular',
-    medium: 'Inter_Medium',
-    semiBold: 'Inter_SemiBold'
+    light: 'Inter18pt-Light',
+    bold: 'Inter18pt-Bold',
+    regular: 'Inter18pt-Regular',
+    medium: 'Inter18pt-Medium',
+    semiBold: 'Inter18pt-SemiBold'
   }
 };

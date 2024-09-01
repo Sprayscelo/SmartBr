@@ -45,11 +45,11 @@
 		<string>Octicons.ttf</string>
 		<string>Zocial.ttf</string>
 		<string>Fontisto.ttf</string>
-		<string>Inter_Bold.ttf</string>
-		<string>Inter_Light.ttf</string>
-		<string>Inter_Medium.ttf</string>
-		<string>Inter_Regular.ttf</string>
-		<string>Inter_SemiBold.ttf</string>
+		<string>Inter18pt-Bold.ttf</string>
+		<string>Inter18pt-Light.ttf</string>
+		<string>Inter18pt-Medium.ttf</string>
+		<string>Inter18pt-Regular.ttf</string>
+		<string>Inter18pt-SemiBold.ttf</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

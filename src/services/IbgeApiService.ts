@@ -17,7 +17,7 @@ class IbgeApiService {
 
   constructor() {
     this.axiosInstance = axios.create({
-      baseURL: 'http://servicodados.ibge.gov.br/api/v3'
+      baseURL: 'https://servicodados.ibge.gov.br/api/v3'
     });
   }
 
@@ -28,7 +28,7 @@ class IbgeApiService {
       );
       return response.data;
     } catch (error) {
-      console.error('Erro ao tentar pegar noticias');
+      console.error('Erro ao tentar pegar noticias', error);
       return null;
     }
   }

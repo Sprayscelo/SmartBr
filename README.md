@@ -10,11 +10,30 @@ Primeiro, você precisará iniciar o **Metro**, o _bundler_ de JavaScript que ac
 
 Para iniciar o Metro, execute o seguinte comando a partir da _raiz_ do seu projeto React Native:
 
+# Android
+
+```bash
+1 - npm install
+
+2 - npm start
+
+3 - npm run android
+
+ou pressione "a" no terminal do **Metro**
+```
+
+# IOS
+
 ```bash
 # usando npm
-npm start
+1 - npm install
+
+2 - cd ios && pod install
+
+3 - npm start
 
 # usando npm
-npm run android
+4 - npm run ios
 
+ou pressione "i" no terminal do **Metro**
 ```

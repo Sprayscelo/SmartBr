@@ -70,12 +70,18 @@ export function NewsItem({
   return (
     <Box>
       <Text
+        _ios={{
+          fontWeight: 'semibold'
+        }}
         fontFamily={theme.fonts.semiBold}
         color={theme.colors.title}
         fontSize={20}>
         {titulo}
       </Text>
       <Text
+        _ios={{
+          fontWeight: 'medium'
+        }}
         fontFamily={theme.fonts.medium}
         fontSize={14}
         color={theme.colors.introduction}
@@ -91,6 +97,9 @@ export function NewsItem({
         alt={`${baseImageUrl}${JSON.parse(imagens).image_intro_alt}`}
       />
       <Text
+        _ios={{
+          fontWeight: 'normal'
+        }}
         fontFamily={theme.fonts.regular}
         color={theme.colors.introduction}
         fontSize={12}

@@ -1,9 +1,9 @@
-import { Image } from 'react-native';
-import { ElementType, ReactNode } from 'react';
-import { Text, View } from 'native-base';
-import { theme } from '@theme/index';
 import { useNavigation } from '@react-navigation/native';
+import { theme } from '@theme/index';
+import { Text, View } from 'native-base';
+import { Image } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface HeaderProps {
   text: string;
@@ -12,9 +12,11 @@ interface HeaderProps {
 
 export function Header({ text, showBackButton = false }: HeaderProps) {
   const { goBack } = useNavigation();
+  const statusBarHeight = useSafeAreaInsets().top;
 
   return (
     <View
+      marginTop={statusBarHeight}
       flexDirection="row"
       alignItems={'center'}
       borderBottomWidth={1}

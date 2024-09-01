@@ -1,4 +1,4 @@
-import { Text } from 'react-native';
+import { Platform, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Octicons from 'react-native-vector-icons/Octicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -22,7 +22,11 @@ export function BottomTabRoutes() {
         headerShown: false,
         tabBarStyle: {
           backgroundColor: theme.colors.tabBarBackgroud,
-          height: 68
+          height: Platform.OS === 'android' ? 68 : 80
+        },
+        tabBarItemStyle: {
+          paddingVertical: Platform.OS === 'android' ? 10 : 0,
+          marginTop: Platform.OS === 'android' ? 0 : 10
         }
       }}>
       <Screen
@@ -37,15 +41,12 @@ export function BottomTabRoutes() {
               color={focused ? theme.colors.blue : theme.colors.icon}
             />
           ),
-          tabBarItemStyle: {
-            paddingVertical: 10
-          },
           tabBarLabel: ({ focused }) => (
             <Text
               style={{
                 fontSize: 10,
                 color: theme.colors.tabBarLetter,
-                fontFamily: focused ? 'Inter_Bold' : 'Inter_Light'
+                fontFamily: focused ? theme.fonts.bold : theme.fonts.light
               }}>
               Início
             </Text>
@@ -64,15 +65,12 @@ export function BottomTabRoutes() {
               color={focused ? theme.colors.blue : theme.colors.icon}
             />
           ),
-          tabBarItemStyle: {
-            paddingVertical: 10
-          },
           tabBarLabel: ({ focused }) => (
             <Text
               style={{
                 fontSize: 10,
                 color: theme.colors.tabBarLetter,
-                fontFamily: focused ? 'Inter_Bold' : 'Inter_Light'
+                fontFamily: focused ? theme.fonts.bold : theme.fonts.light
               }}>
               Favorito
             </Text>

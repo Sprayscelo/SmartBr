@@ -38,6 +38,9 @@ export function Favorites() {
               color={theme.colors.icon}
             />
             <Text
+              _ios={{
+                fontWeight: '600'
+              }}
               fontFamily={theme.fonts.semiBold}
               color={theme.colors.letter}
               fontSize={16}
